@@ -10,7 +10,6 @@ A vending machine payment system with prepaid RFID cards, built on an ESP32-S3.
 <p align="center">
   <img src="images/machine.jpg" alt="Vending machine prototype" width="420">
 </p>
-<p align="center"><i>Prototype: product slot (top left), screen and keypad (top right), RFID reader (bottom right)</i></p>
 
 ---
 
@@ -22,16 +21,6 @@ cd RFID-Vending-Machine
 ```
 
 Or click **Code → Download ZIP** on GitHub.
-
-```
-RFID-Vending-Machine/
-├── firmware/
-│   ├── vending_machine/vending_machine.ino   main program
-│   ├── create_database/create_database.ino   creates the JSON files (run once)
-│   └── TFT_eSPI_User_Setup.h                 screen settings
-├── images/                                   pictures used in this README
-└── README.md
-```
 
 ---
 
