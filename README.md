@@ -103,18 +103,8 @@ The file contains `#define USE_HSPI_PORT`. Keep it: the screen and the RFID read
 
 ---
 
-## 5. Upload
 
-In the Arduino IDE choose **Tools → Board → ESP32S3 Dev Module**.
-
-1. **Create the database (once).** Open `firmware/create_database/create_database.ino` and upload it. Open the Serial Monitor (115200 baud). You should see `OK` for the 4 files.
-2. **Upload the main program.** Open `firmware/vending_machine/vending_machine.ino` and upload it.
-
-Running `create_database` again erases all students, credit and sales.
-
----
-
-## 6. Add your own cards
+## 5. Add your own cards
 
 The sample data uses fake card UIDs, so your cards will show "User not found" at first.
 
@@ -157,15 +147,6 @@ The files are stored in the ESP32 flash:
 | `Transactions.json` | `UID`, `product_id`, `price` |
 
 To change the products, edit `create_database.ino` and upload it again.
-
----
-
-## Limits
-
-- `releaseProduct()` only prints a message. Connect your motor or servo there.
-- The card UID is the only check. A copied card can be used to pay. For real money, add a PIN or use secure cards (MIFARE DESFire).
-- Transactions have no date because the board has no clock.
-- Adding a student needs a PC with the Serial Monitor, because the keypad cannot type letters.
 
 ---
 
